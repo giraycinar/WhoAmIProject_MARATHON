@@ -1,0 +1,48 @@
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+             http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+             version="2.1">
+
+    <persistence-unit name="CRM">
+        <description>
+            Persistence unit for Hibernate User Guide
+        </description>
+
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <class>com.giray.entity.DikkatCekiciBilgiler</class>
+        <class>com.giray.entity.Ipuclari</class>
+        <class>com.giray.entity.Kazanan</class>
+        <class>com.giray.entity.Sorular</class>
+        <class>com.giray.entity.UnluKisi</class>
+        <class>com.giray.entity.Yarisma</class>
+        <class>com.giray.entity.Yarismacilar</class>
+
+
+
+
+        <properties>
+            <property name="jakarta.persistence.jdbc.driver"
+                      value="org.postgresql.Driver" />
+
+            <property name="jakarta.persistence.jdbc.url"
+                      value="jdbc:postgresql://localhost:5432/WhoAmIDB" />
+
+            <property name="jakarta.persistence.jdbc.user"
+                      value="postgres" />
+
+            <property name="jakarta.persistence.jdbc.password"
+                      value="root" />
+
+            <property name="hibernate.show_sql"
+                      value="true" />
+
+            <property name="hibernate.hbm2ddl.auto"
+                      value="update" />
+            <!--            update, create, create-drop, -->
+        </properties>
+
+    </persistence-unit>
+
+</persistence>
